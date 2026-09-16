@@ -1,0 +1,9 @@
+import Link from 'next/link'
+
+const checks = [
+  ['01', 'Have you eaten something with real substance?', 'A warm meal counts. So does toast with butter. The goal is not perfect nutrition; it is giving your body something to work with.'],
+  ['02', 'What would make the next hour softer?', 'A shower, a glass of water, a closed door, or asking someone else to hold the baby while you breathe.'],
+  ['03', 'Who can take one thing off your list?', 'Name the thing plainly. People who love you often want a useful place to begin.'],
+]
+
+export default function FirstWeekCheck() { return <main className="check-page"><nav className="site-nav"><Link className="wordmark" href="/">morrow<span>·</span></Link><Link className="nav-cta" href="/">Back home <span>↗</span></Link></nav><section className="check-hero"><p className="eyebrow">A small companion for a big week</p><h1>The First<br /><em>Week Check.</em></h1><p>There is no right way to feel in the first week. Use these gentle questions as a place to pause, notice, and ask for what would help.</p><div className="check-mark">01—07<br /><span>one day at a time</span></div></section><section className="check-list"><div className="section-kicker"><span>01</span><span>Pause here</span></div>{checks.map(([number, question, answer]) => <article key={number}><span>{number}</span><div><h2>{question}</h2><p>{answer}</p></div><i>✦</i></article>)}</section><section className="check-close"><p className="eyebrow">Keep this close</p><h2>Small care<br /><em>still counts.</em></h2><Link className="dark-button" href="/#gift">Explore care gifts <span>→</span></Link></section><footer className="site-footer"><div className="footer-mark">morrow<span>·</span></div><p>Care for the beginning<br />and everything after.</p><small>© 2026 morrow care co.</small></footer></main> }
